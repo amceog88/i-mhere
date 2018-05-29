@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SusanneWebsite</title>
+    <title>I-M HERE</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,15 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <%= favicon_link_tag 'icon.png' %>
   </head>
-
+    
   <body class="is-loading">
-    <%= yield %>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <div id="wrapper" class="fade-in">
+
+      <div id="intro">
+        <h1>I-M HERE</h1>
+        <h1>商業x英文x德文</h1> 
+        <p>Try to do our best.
+        </p>
+        <ul class="actions">
+          <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+      </div>
+
+      <header id="header">
+        <%= link_to 'Massively', root_path , class: "logo" %>
+      </header>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
