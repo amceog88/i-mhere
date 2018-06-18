@@ -16,23 +16,30 @@
   </head>
     
   <body class="is-loading">
-    <div id="wrapper" class="fade-in">
+    <div class="html5up">
+      <div id="wrapper" class="fade-in">
 
-      <div id="intro">
-        <h1>I-M HERE</h1>
-        <h1>商業x英文x德文</h1> 
-        <p>Try to do our best.
-        </p>
-        <ul class="actions">
-          <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-        </ul>
+        <div id="intro">
+          <h1>I-M HERE</h1>
+          <h1>商業x英文x德文</h1> 
+          <p>Try to do our best.
+          </p>
+          <ul class="actions">
+            <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+          </ul>
+        </div>
+
+        <header id="header">
+          <%= link_to 'Massively', root_path , class: "logo" %>
+        </header>
+
+        <%= yield %>
+
+
+        <div id="copyright">
+          <ul><li>&copy; Untitled I-M HERE 2018</li><li>Design by: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
       </div>
-
-      <header id="header">
-        <%= link_to 'Massively', root_path , class: "logo" %>
-      </header>
-
-      <%= yield %>
     </div>
   </body>
 </html>

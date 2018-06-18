@@ -5,9 +5,14 @@ Rails.application.routes.draw do
   get "home/blog"
   get "home/about"
   get "home/contact"
+  get "home/coming_soon"
 
+  resources :writings
   namespace :admin do
     root 'home#index'
+    resources :writings
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
   
 end

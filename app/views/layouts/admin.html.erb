@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I-M HERE</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+    <%= favicon_link_tag 'icon.png' %>
+  </head>
+    
+  <body style="background-color: #fff">
+    <div class="admin-bar">
+      <ul>
+        <li><%= link_to "前台首頁", root_path %></li>
+        <li><%= link_to "home", admin_root_path %></li>
+        <li><a href="#">About</a></li>
+        <li><%= link_to "writing", admin_writings_path %></li>
+        <li><a href="#">Contact</a></li>
+        <li><%#= link_to "admin_user",admin_user_path %></li>
+      </ul>
+    </div>
+    <%= yield %>
+
+  </body>
+</html>

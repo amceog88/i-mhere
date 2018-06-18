@@ -10,6 +10,67 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@import "bootstrap";
+@import "main";
+
+.admin-bar{
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+      background-color: #111;
+  }
+
+  .active {
+      background-color: #4CAF50;
+  }
+} 
+
+.writing_form {
+  form{
+    margin: 0;
+  }
+  label{
+    display: unset;
+  }
+}
+
+
+.admin_writing_image {
+  img{
+    width: 350px;
+  }
+}
+
+.home_index{
+  img{
+    max-height: 300px;
+    object-fit: cover; 
+  }
+}
+
+.pagination {
+  ul{
+    li{
+      padding-left: 0;
+    }    
+  }
+}

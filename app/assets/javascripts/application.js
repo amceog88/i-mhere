@@ -13,5 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require jquery
+//= require bootstrap-sprockets
+//= require ckeditor/init
 //= require skel.min
 //= require_tree .

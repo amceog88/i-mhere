@@ -224,23 +224,23 @@
 					}
 
 				// Hide intro on scroll (> small).
-					skel.on('!small -small', function() {
+					// skel.on('!small -small', function() {
 
-						$main.unscrollex();
+					// 	$main.unscrollex();
 
-						$main.scrollex({
-							mode: 'bottom',
-							top: '25vh',
-							bottom: '-50vh',
-							enter: function() {
-								$intro.addClass('hidden');
-							},
-							leave: function() {
-								$intro.removeClass('hidden');
-							}
-						});
+					// 	$main.scrollex({
+					// 		mode: 'bottom',
+					// 		top: '25vh',
+					// 		bottom: '-50vh',
+					// 		enter: function() {
+					// 			$intro.addClass('hidden');
+					// 		},
+					// 		leave: function() {
+					// 			$intro.removeClass('hidden');
+					// 		}
+					// 	});
 
-					});
+					// });
 
 				// Hide intro on scroll (<= small).
 					skel.on('+small', function() {

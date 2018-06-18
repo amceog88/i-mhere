@@ -1,0 +1,39 @@
+<nav id="nav">
+  <ul class="links">
+    <li><%= link_to '文章首頁' ,root_path %></li>
+    <li><%= link_to "關於我們", home_about_path %></li>
+    <li><%= link_to "聯絡我們", home_contact_path %></li>
+  </ul>
+  <ul class="icons">
+    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+  </ul>
+</nav>
+
+<!-- Main -->
+
+<div id="main">
+
+  <section class="post" style="width: 80%;text-align: center;margin-left: auto;
+    margin-right: auto;">
+    <header class="major">
+      <span class="date"><%= time_ago_in_words(@writing.created_at) %> ago</span>
+      <h3 style="font-size: 25px;"><%= @writing.title %></h3>
+    </header>
+    <div class="image main">
+      <% if @writing.image.attached? %>
+        <%= image_tag(@writing.image) %>
+        <% else %>
+        <img src="<%= asset_path 'pic01.jpg' %>" alt="" />
+      <% end %>
+    </div>
+    <p><%= raw(@writing.description) %></p>
+    <div class="writer_profile col-md-12" style="background-color: gray;">
+      <div class="left col-md-6">fvho</div>
+      <div class="right col-md-6">fjivjdfp</div>
+    </div>
+  </section>
+
+
+</div>

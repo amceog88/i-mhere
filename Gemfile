@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.1'
+ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -37,6 +37,13 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+
+gem 'bootstrap'
+gem 'bootstrap-sass'
+
+gem 'ckeditor'
+
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -17,5 +17,9 @@ module SusanneWebsite
     # the framework and any gems in your application.
     config.assets.paths << Rails.root.join('/app/assets/fonts')
     config.assets.precompile += %w( .woff .ttf )
+    Rails.application.config.assets.precompile += %w( ckeditor/*)
+    config.to_prepare do
+      Devise::SessionsController.layout "admin"
+    end
   end
 end

@@ -1,0 +1,38 @@
+<h3>部落格管理<%= link_to '新增文章', new_admin_writing_path, :class => 'btn btn-success' %></h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>標題</th>
+      <th>作者</th>
+      <th>內容</th>
+      <th>日期</th>
+      <th>圖片</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @writings.each do |writing| %>
+      <tr>
+        <td><%= writing.title %></td>
+        <!-- <td><%#= writing.user.id %></td> -->
+        <td><%= writing.writer %></td>
+        <td><em><%= time_ago_in_words(writing.created_at) %> ago -</em></td>
+        <td><%= simple_format(writing.description.truncate(100)) %></td>
+        <td>
+          <div class="home_index"> 
+          <% if writing.image.attached? %> 
+            <%= image_tag(writing.image) %>
+            <% else %>
+            無照片
+          <% end %> 
+          </div> 
+        </td>
+        <td><%= link_to '編輯', edit_admin_writing_path(writing), :class => "btn btn-info" %></td>
+        <td><%= link_to '刪除', admin_writing_path(writing), method: :delete, data: { confirm: '確定要刪除?' }, :class => "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+    <%= paginate @writings %>
+  </tbody>
+</table>
