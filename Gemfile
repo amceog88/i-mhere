@@ -45,6 +45,11 @@ gem 'ckeditor'
 
 gem 'kaminari'
 
+group :production do
+  # gem "pg"
+  gem 'mysql2', '< 0.5'
+end
+
 group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
