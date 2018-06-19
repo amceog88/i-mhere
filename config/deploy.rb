@@ -5,6 +5,8 @@ lock "~> 3.11.0"
 set :application, "i-m_here"
 set :repo_url, "git@github.com:amceog88/i-mhere.git"
 
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.4.2'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
