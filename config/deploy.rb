@@ -1,4 +1,5 @@
 # config valid for current version and patch releases of Capistrano
+`ssh-add`
 lock "~> 3.11.0"
 
 set :application, "i-m_here"
@@ -12,7 +13,7 @@ set :deploy_to, '/home/deploy/i-mhere'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
-
+default_run_options[:pty] = true
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
