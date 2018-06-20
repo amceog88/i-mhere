@@ -45,6 +45,9 @@ gem 'ckeditor'
 
 gem 'kaminari'
 
+gem 'capistrano', '~> 3.9'
+gem 'capistrano-rbenv', '~> 2.1'
+
 group :production do
   # gem "pg"
   gem 'mysql2', '< 0.5'

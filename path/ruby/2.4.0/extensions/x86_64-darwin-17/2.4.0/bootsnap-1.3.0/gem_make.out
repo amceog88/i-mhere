@@ -1,0 +1,15 @@
+current directory: /Users/Siegmund/product/susanne_website/path/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+/Users/Siegmund/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20180619-29000-1r80fxk.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Siegmund/product/susanne_website/path/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/Siegmund/product/susanne_website/path/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/Siegmund/product/susanne_website/path/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20180619-29000-kssseu/bootsnap
