@@ -17,10 +17,13 @@ set :rbenv_ruby, '2.4.4'
 set :rbenv_path, '/home/deploy/.rbenv'
 
 
-namespace :deploy do
-  desc "reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+task :seed do
+  on primary fetch(:migration_role) do
+    within release_path do
+      with rails_env: fetch(:rails_env)  do
+        execute :rake, 'db:seed'
+      end
+    end
   end
 end
 # Default value for :format is :airbrussh.
