@@ -15,6 +15,18 @@ set :deploy_to, '/home/deploy/i-mhere'
 set :rbenv_type, :system #depends on your rbenv setup
 set :rbenv_ruby, '2.4.4'
 set :rbenv_path, '/home/deploy/.rbenv'
+
+
+namespace :deploy do
+  desc "reload the database with seed data"
+  task :seed do
+    on roles(:all) do
+      within current_path do
+        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
+      end
+    end
+  end
+end
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 # default_run_options[:pty] = true
