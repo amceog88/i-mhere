@@ -10,6 +10,11 @@ set :repo_url, "git@github.com:amceog88/i-mhere.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/i-mhere'
+
+
+set :rbenv_type, :system #depends on your rbenv setup
+set :rbenv_ruby, '2.4.4'
+set :rbenv_path, '/home/deploy/.rbenv'
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 # default_run_options[:pty] = true
