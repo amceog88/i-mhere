@@ -20,11 +20,7 @@ set :rbenv_path, '/home/deploy/.rbenv'
 namespace :deploy do
   desc "reload the database with seed data"
   task :seed do
-    on roles(:all) do
-      within current_path do
-        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
-      end
-    end
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
 end
 # Default value for :format is :airbrussh.
