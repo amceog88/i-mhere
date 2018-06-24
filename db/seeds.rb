@@ -8,5 +8,6 @@
 
 
 puts "set admin user..."
+
 admin = User.create!(email: 'fish51412@i-mhere.com', password: 'imhere', role: 'admin')
 admin.save

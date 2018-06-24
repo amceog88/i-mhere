@@ -16,15 +16,15 @@ set :rbenv_type, :system #depends on your rbenv setup
 set :rbenv_ruby, '2.4.4'
 set :rbenv_path, '/home/deploy/.rbenv'
 
-desc 'Runs rake db:seed'
-task :seed => [:set_rails_env] do
-  on primary fetch(:migration_role) do
-    within release_path do
-      with rails_env: fetch(:rails_env) do
-        execute :rake, "db:seed"
-      end
+task :seed do
+ puts "\n=== Seeding Database ===\n"
+ on primary :db do
+  within current_path do
+    with rails_env: fetch(:stage) do
+      execute :rake, 'db:seed'
     end
   end
+ end
 end
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
