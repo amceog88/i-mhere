@@ -9,5 +9,5 @@
 
 puts "set admin user..."
 
-admin = User.create!(email: 'root@i-mhere.com', password: 'imhere', role: 'admin')
+admin = User.create!(email: 'roots@i-mhere.com', password: 'imhere', role: 'admin')
 admin.save
