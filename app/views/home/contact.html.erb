@@ -3,20 +3,21 @@
     <li><%= link_to '文章首頁' ,root_path %></li>
     <li><%= link_to "關於我們", home_about_path %></li>
     <li class="active"><%= link_to "聯絡我們", home_contact_path %></li>
+    <li><%= link_to "語言百科", home_coming_soon_path %></li>
   </ul>
   <ul class="icons">
     <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    <li><a href="https://www.facebook.com/IMHERETODO/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
     <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
   </ul>
 </nav>
 <!-- Footer -->
 <footer id="footer">
   <section>
-    <form method="post" action="#">
+    <%#= form_for @contact do |f| %>
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
+        <%= text_field :name, :required => true , placeholder: "姓名" , class: "form-input", id: "contact-first-name" ,  type:"text" , name: "name" %>
       </div>
       <div class="field">
         <label for="email">Email</label>
@@ -29,13 +30,12 @@
       <ul class="actions">
         <li><input type="submit" value="Send Message" /></li>
       </ul>
-    </form>
+    <%# end %>
   </section>
   <section class="split contact">
     <section class="alt">
       <h3>Address</h3>
-      <p>1234 Somewhere Road #87257<br />
-      Nashville, TN 00000-0000</p>
+      <p></p>
     </section>
     <section>
       <h3>Phone</h3>
@@ -43,7 +43,7 @@
     </section>
     <section>
       <h3>Email</h3>
-      <p><a href="#">info@untitled.tld</a></p>
+      <p><a href="#">imhere20180428@gmail.com</a></p>
     </section>
     <section>
       <h3>Social</h3>
